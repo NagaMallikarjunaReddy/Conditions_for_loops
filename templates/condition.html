@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COndition Statements</title>
+</head>
+<body>
+    <center>
+        
+        <!-- <h1>Here we are performing condition statements using jinja Tags</h1>
+        {% if a > 50 %}
+            <h1>Inside if Block</h1>
+            <h1>{{a}}</h1>
+        {% endif %} -->
+        
+        <!-- {% if a > b %}
+            <h1>Inside if block</h1>
+            <h1>A is max</h1>
+            <h1>{{a}}</h1>
+        {% else %}
+            <h1>Inside Else Block</h1>
+            <h1>B is max</h1>
+            <h1>{{b}}</h1>
+        {% endif %} -->
+
+        <!-- {% if a > b and a > c%}
+            <h1>Inside if block</h1>
+            <h1>A is max</h1>
+            <h1>{{a}}</h1>
+        {% elif b > c%}
+            <h1>Inside Elif block</h1>
+            <h1>B is max</h1>
+            <h1>{{b}}</h1>
+        {% else %}
+            <h1>Inside Else block</h1>
+            <h1>C is max</h1>
+            <h1>{{c}}</h1>
+        {% endif %} -->
+
+        {% if a > b %}
+            {% if a > c %}
+                <h1>Inside first inner if block</h1>
+                <h1>A is max</h1>
+                <h1>{{a}}</h1>
+            {% else %}
+                <h1>Inside first inner else</h1>
+                <h1>C is max</h1>
+                <h1>{{c}}</h1>
+            {% endif %}
+        {% else %}
+            {% if b > c %}
+                <h1>Inside second inner if block</h1>
+                <h1>B is max</h1>
+                <h1>{{b}}</h1>
+            {% else %}
+                <h1>Inside second inner else</h1>
+                <h1>C is max</h1>
+                <h1>{{c}}</h1>
+            {% endif %}
+        {% endif %}
+    </center>
+</body>
+</html>
